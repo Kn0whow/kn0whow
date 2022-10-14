@@ -1,8 +1,8 @@
 ---
+permalink: /about/
 title: "About the author"
 toc: true
 toc_label: "Contents"
-permalink: /about/
 ---
 
 ## Introduction to me
