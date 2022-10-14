@@ -3,6 +3,7 @@ permalink: /about/
 title: "About the author"
 toc: true
 toc_label: "Contents"
+author_profile: true
 ---
 
 ## Introduction to me
