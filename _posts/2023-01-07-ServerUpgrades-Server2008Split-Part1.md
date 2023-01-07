@@ -78,5 +78,5 @@ Thank you for reading!
 
 ## References
 
-1. https://community.spiceworks.com/how_to/160139-migrate-dhcp-from-windows-server-2008-to-windows-server-2019
-2. https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-guide-active-directory-migration-from-windows/ba-p/2888117
+1. [https://community.spiceworks.com/how_to/160139-migrate-dhcp-from-windows-server-2008-to-windows-server-2019](https://community.spiceworks.com/how_to/160139-migrate-dhcp-from-windows-server-2008-to-windows-server-2019)
+2. [https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-guide-active-directory-migration-from-windows/ba-p/2888117](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-guide-active-directory-migration-from-windows/ba-p/2888117)
