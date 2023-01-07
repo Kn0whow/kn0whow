@@ -18,7 +18,7 @@ toc_label: "Contents"
 
 ## Purpose of the project
 
-Now the 2008 server has the following roles: Active Directory (AD), DNS, DHCP, and the main company File Server, which of course is neither good or ideal. So the purpose of this project is to split the server, which is a physical server, into two new 2022 virtual servers. One server will run AD, DNS, and DHCP, and the other will be the new file server. So the project will be split into two parts:
+The 2008 server has the following roles: Active Directory (AD), DNS, DHCP, and the main company File Server, which of course is neither good or ideal. So the purpose of this project is to split the server, which is a physical server, into two new 2022 virtual servers. One server will run AD, DNS, and DHCP, and the other will be the new file server. So the project will be split into two parts:
 
 * Part 1: Move the AD, DNS, and DHCP roles onto a new 2022 server.
 * Part 2: Move the file server onto a new 2022 server, separate from the new Domain Controller (DC) server.
@@ -29,9 +29,9 @@ This server has been in production for many many years, since before I started a
 
 For the first part of the project I made the following plan:
 
-* Create new 2022 DC.
+* Create new 2022 DC (DC22).
 * Install DHCP Role on the new DC.
-* Export DHCP from 2008 DC and import onto 2022 DC.
+* Export DHCP from 2008 DC (DC08) and import onto 2022 DC.
 * Deauthorise 2008 DHCP server and Authorise the new 2022 DHCP server.
 * Install AD on 2022 using 2008 as the template, and promote as DC.
 * Transfer all DC FSMO roles from 2008 to 2022.
@@ -41,22 +41,42 @@ For the first part of the project I made the following plan:
 
 ## Implementing the plan
 
-### Creating the new 2022 DC
+### Moving DHCP from DC08 to DC22
 
-The new 2022 DC (DC01) was created in Hyper-V and was assigned 2 vCPUs and 4GB of RAM, this seemed to be the ideal config for this server. I added the server to the domain and ensured all updates and our AV were installed.
+To migrate DHCP onto the new server I followed the following guide on the [Spiceworks](https://community.spiceworks.com/how_to/160139-migrate-dhcp-from-windows-server-2008-to-windows-server-2019) website [1].
 
-### Install DCHP Role on 2022 DC
+### Moving AD and DNS role from DC08 to DC22
 
+To migrate the AD and DNS roles onto the new 2022 server I used the following guide on the [Microsoft Tech Community](https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-guide-active-directory-migration-from-windows/ba-p/2888117) website [2].
 
+### Changing IP from old DC08 to new DC22
+
+After migrating DCHP and the DC roles over to the new server, I then moved the IP address of the old DC08 server onto the new DC22 server. My reasoning for doing this is because we have many static IP configs that point DNS to the DC08 IP address so it made sense to continue to use the same IP address to avoid mass config changes and potential DNS issues. 
+
+The IP address of the old DC08 server was then changed to a new one.
+
+## Testing
+
+To test how successful the changes were, we did the following:
+
+* Reboot IP phones and ensure they pick up DHCP addresses.
+* Test logging into PC's and Laptops over ethernet and wifi to ensure they can find domain logon servers.
+* Test DNS by pinging hostnames.
+* Test shared folders are still accessible on DC08 as it will still be used as a file serer until Part 2 is complete.
+
+All tests were successful!
+
+## Issues that arose during work
+
+Fortunately there weren't any major issues. One of the only issues was the need to reconfigure a Datto backup agent to point to the new IP address of the old DC08 server to ensure files on there are still backed up.
 
 ## Conclusion
 
-In conclusion, make sure you constantly keep up to date with Microsoft changes, and ensure you prepare properly for them…like I should have! and also make sure you check out [the Sysadmin subreddit](https://www.reddit.com/r/sysadmin) if you are working in IT, you get some great advice on there and good banter too!
+Overall I think the work took around 3 hours to complete when taking into account all the server intallations and reboots and the testing at the end. But at the end of it all, we now have a brand new 2022 server running AD, DHCP and DNS with no apparent issues. The next part will cover moving files over from the DC08 to the new file serer FS22.
 
 Thank you for reading!
 
 ## References
 
-1. [https://learn.microsoft.com/en-us/microsoft-365/admin/security-and-compliance/enable-modern-authentication?view=o365-worldwide](https://www.learn.microsoft.com/en-us/microsoft-365/admin/security-and-compliance/enable-modern-authentication?view=o365-worldwide)
-2. [https://techcommunity.microsoft.com/t5/exchange-team-blog/microsoft-and-apple-working-together-to-improve-exchange-online/ba-p/3513846](https://techcommunity.microsoft.com/t5/exchange-team-blog/microsoft-and-apple-working-together-to-improve-exchange-online/ba-p/3513846)
-3. [https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online](https://www.learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-basic-authentication-exchange-online)
+1. https://community.spiceworks.com/how_to/160139-migrate-dhcp-from-windows-server-2008-to-windows-server-2019
+2. https://techcommunity.microsoft.com/t5/itops-talk-blog/step-by-step-guide-active-directory-migration-from-windows/ba-p/2888117
