@@ -41,6 +41,10 @@ For the first part of the project I made the following plan:
 
 ## Implementing the plan
 
+### Creating the new DC server
+
+I created the new DC server (DC22) in Hyper-V using Windows Server 2022 Standard OS. The VM has 2 vCPUs, 4GB of RAM and a 75GB C: Drive. These specs seem to be ideal for a domain controller. I would have used 1 vCPU but our Anti-Virus software was using too much of the CPU.
+
 ### Moving DHCP from DC08 to DC22
 
 To migrate DHCP onto the new server I followed the following guide on the [Spiceworks](https://community.spiceworks.com/how_to/160139-migrate-dhcp-from-windows-server-2008-to-windows-server-2019) website [1].
@@ -62,7 +66,7 @@ To test how successful the changes were, we did the following:
 * Reboot IP phones and ensure they pick up DHCP addresses.
 * Test logging into PC's and Laptops over ethernet and wifi to ensure they can find domain logon servers.
 * Test DNS by pinging hostnames.
-* Test shared folders are still accessible on DC08 as it will still be used as a file serer until Part 2 is complete.
+* Test shared folders are still accessible on DC08 as it will still be used as a file server until Part 2 is complete.
 
 All tests were successful!
 
@@ -72,7 +76,7 @@ Fortunately there weren't any major issues. One of the only issues was the need 
 
 ## Conclusion
 
-Overall I think the work took around 3 hours to complete when taking into account all the server intallations and reboots and the testing at the end. But at the end of it all, we now have a brand new 2022 server running AD, DHCP and DNS with no apparent issues. The next part will cover moving files over from the DC08 to the new file serer FS22.
+Overall I think the work took around 3 hours to complete when taking into account all the server intallations and reboots and the testing at the end. But at the end of it all, we now have a brand new 2022 server running AD, DHCP and DNS with no apparent issues. The next part will cover moving files over from the DC08 to the new file server FS22.
 
 Thank you for reading!
 
