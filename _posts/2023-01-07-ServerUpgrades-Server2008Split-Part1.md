@@ -1,5 +1,5 @@
 ---
-title: "Server Upgrade - Part 1: Moving AD, DNS, and DHCP from Server 2008 to Server 2022"
+title: "Windows Server 2008 Upgrade - Part 1: Moving AD, DNS, and DHCP from Server 2008 to Server 2022"
 categories: 
   - Windows Server
 tags:
