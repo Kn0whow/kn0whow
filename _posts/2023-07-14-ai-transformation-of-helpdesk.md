@@ -1,7 +1,7 @@
 ---
 title: "Embracing the Power of AI: Transforming IT Helpdesk Roles"
 categories: 
-  - Opinion
+  - Essay
 tags:
   - Opinion
   - AI
