@@ -11,6 +11,10 @@ toc: true
 toc_label: "Contents"
 ---
 
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/ai-brain-blue.jpg" alt="Image of Brain with tech in background">
+
+## Introduction
+
 Artificial intelligence (AI) has emerged as a game-changer in various industries, revolutionizing the way we work and interact with technology. One area where AI is poised to make a significant impact is in IT helpdesk roles. As businesses increasingly adopt AI technologies, IT professionals in helpdesk positions will experience a profound transformation in their responsibilities and workflows. In this blog post, we explore the ways AI is reshaping IT helpdesk roles and how professionals can leverage this technology to enhance customer support and drive efficiency.
 
 ## Automated Ticketing and Routing
