@@ -15,7 +15,7 @@ For those of you who work in IT, you will understand that switching off from wor
 
 For me personally, I've not had an issue too much with work following me home, or being bothered too much out of hours (apart from the occasional 3am call for a printer issue), my issue was that it felt like all I had was work. I would get home and I wouldn't know what to do with myself, apart from sit on the sofa, eat food and watch crap on TV. I felt like my life was just work and then my free time being an afterthought. I realised that I needed a hobby, something I could focus on outside of work, and look forward to after work and on weekends. One of these new-found hobbies is Stand Up Paddle boarding (SUP-ing). It's been great to get out into nature, out on the water, enjoy the peace and quiet, while also getting some good exercise in! I also started running in the mornings before work (can't say I enjoy it much when I first get up and out....but it must be done).
 
-![Paddleboard Inflating]({{ site.url }}{{ site.baseurl }}/assets/Images/paddleboard-inflating-1.jpg)
+<img src="{{ site.url }}{{ site.baseurl }}/assets/images/paddleboard-inflating-1.jpg" alt="Paddleboard Inflating">
 
 ## How to take your mind of work
 
