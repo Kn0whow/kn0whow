@@ -20,7 +20,7 @@ In 1999 the Post Office, a state owned limited company in the UK, rolled out a n
 
 ## Sub-Posmasters Raise their concerns
 
-Imediately the sub-postmasters began to raise their concerns about the system. They would call the Horizon tech support helpline and be told that there was no issue, no other office raised concerns, and that the issues would just 'sort themselves out'. Anyone who works in IT will know that things do not 'sort themselvesout'. Despite repeated claims by postmasters that the issues were not due to their actions but rather faults in the Horizon IT system, the Post Office vehemently defended the reliability of the technology. The Post Office sided with the system, rather than the people.
+Imediately the sub-postmasters began to raise their concerns about the system. They would call the Horizon tech support helpline and be told that there was no issue, no other office raised concerns, and that the issues would just 'sort themselves out'. Anyone who works in IT will know that things do not 'sort itself out'. Despite repeated claims by postmasters that the issues were not due to their actions but rather faults in the Horizon IT system, the Post Office vehemently defended the reliability of the technology. The Post Office sided with the system, rather than the people.
 
 ## Consequences of the Errors
 
