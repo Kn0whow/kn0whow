@@ -49,5 +49,5 @@ The story of this scandal was first brought into the spotlight by Computer Weekl
 There are some excellent resources out there to learn more about this story, here are some below:
 
 * ITV's Series Mr Bates vs The Post Office - [watch on ITV X](https://www.itv.com/watch/mr-bates-vs-the-post-office/10a0469/10a0469a0001)
-* Computer Weeklys all you need to know article - [Computer Weekly] (https://www.computerweekly.com/feature/Post-Office-Horizon-scandal-explained-everything-you-need-to-know)
+* Computer Weeklys all you need to know article - [Computer Weekly](https://www.computerweekly.com/feature/Post-Office-Horizon-scandal-explained-everything-you-need-to-know)
 * Wikipedia article about the scandal - [Wikipedia](https://en.wikipedia.org/wiki/British_Post_Office_scandal)
