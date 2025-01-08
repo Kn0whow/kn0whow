@@ -40,13 +40,13 @@ It was 4 hours into this investigation, 3 cups of coffee had been made and gone 
 
 So we went back to our theory about users being naughty and plugging things in. We came to the conclusion, that someone, somewhere had done something. So we went round each office, checking ports and scowling at end users until we finally found something interesting...
 
-Sitting there, on end of a desk, was shiny new Amazon Echo Dot, playing some of the latest chart music for one of the offices. 'Where did this come from?' we asked, 'I bought it this week' a happy colleague replied. 'When did you set this up?' we asked, 'we set it up this afternoon' they replied. 'What time did you set it up?' we asked, dreading the answer, 'oh, about 1/2pm I think?' they replied. 
+Sitting there, on the end of a desk, was a shiny new Amazon Echo Dot, playing some of the latest chart music for one of the offices. 'Where did this come from?' we asked, 'I bought it this week' a happy colleague replied. 'When did you set this up?' we asked, 'we set it up this afternoon' they replied. 'What time did you set it up?' we asked, dreading the answer, 'oh, about 1/2pm I think?' they replied. 
 
-We unplugged the speaker, and fought the temptation to throw it like a shot put out the window, and low and behold, the wifi network resumed it's usual operation, no weird pings, no users being disconnected, no snail speed connections. It all went back to normal.
+We unplugged the speaker, and fought the temptation to throw it like a shot-put out the window, and low and behold, the wifi network resumed it's usual operation, no weird pings, no users being disconnected, no snail speed connections. It all went back to normal.
 
-There it was, our answer to the greatest mystery of this week. A seemingly innocent smart speaker, connected to the corporate wifi, had somehow crippled our wifi network. It didn't show up on network traffic logs throwing out a load of broadcast traffic, nothing in our logs suggested it was an issue? 
+There it was, our answer to the greatest mystery of this week. A seemingly innocent smart speaker, connected to the corporate wifi, had somehow crippled our wifi network. It didn't show up on network traffic logs throwing out a load of broadcast traffic, nothing in our other logs suggested it was an issue? 
 
-Investigations are still ongoing onto how this caused the network issues.
+>Investigations are still ongoing onto how this caused the network issues.
 
 ## Future considerations
 
